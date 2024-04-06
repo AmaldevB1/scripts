@@ -13,5 +13,5 @@ sed -i "s/$currentChartVersion/$chartVersion/" ./chartName.yaml
 read shouldUpgrade
 if [ "$shouldUpgrade" = "y" ];
 then
-./helm upgrade $chartName ./chartFile -f ./$chartName.yaml --version $chartVersion
+./helm upgrade $chartName ./helmChartFile -f ./$chartName.yaml --version $chartVersion
 fi
